@@ -1,0 +1,17 @@
+{
+  "links": [
+    {
+      "source": "csgo",
+      "destination": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\cfg",
+      "linkAll": true
+    },
+    {
+      "source": "warfork\\config.cfg",
+      "destination": "env:HOME\\Documents\\My Games\\Warfork 2.1\\basewf\\config.cfg"
+    },
+    {
+      "source": "warfork\\huds",
+      "destination": "env:HOME\\Documents\\My Games\\Warfork 2.1\\basewf\\huds"
+    }
+  ]
+}
