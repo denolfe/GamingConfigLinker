@@ -1,6 +1,10 @@
 {
   "links": [
     {
+      "source": "apex",
+      "destination": "env:HOME\\Saved Games\\Respawn\\Apex\\local\\settings.cfg"
+    },
+    {
       "source": "csgo",
       "destination": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\cfg",
       "linkAll": true
