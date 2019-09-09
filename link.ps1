@@ -32,7 +32,11 @@ $jsondata = Get-Content -Raw -Path $configPath | ConvertFrom-Json
 $jsondata.links | ForEach-Object {
   if ($_.linkAll) {
     $config = $_
-    Get-Item -Path "$($pwd.Path)\$($config.source)\\*" | ForEach-Object {
+    $pattern = "*"
+    if ($_.pattern) {
+      $pattern = $_.pattern
+    }
+    Get-Item -Path "$($pwd.Path)\$($config.source)\\$pattern" | ForEach-Object {
       $fullDestPath = "$($config.destination)\$(Split-Path -Path $_ -Leaf)"
       linkSingle $fullDestPath $_
     }
