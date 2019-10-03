@@ -12,8 +12,10 @@ function linkSingle([string]$dest, [string]$source) {
     Write-Error "Source does not exist"
   }
 
-  # $env:HOME variable replacement
+  # Env variable replacement
   $dest = $dest -replace "env:HOME", "$($env:HOME)"
+  $dest = $dest -replace "env:ProgramFiles", "$($env:ProgramFiles)"
+  $dest = $dest -replace "env:ProgramFiles\(x86\)", "$(${env:ProgramFiles(x86)})"
 
   # Relink if symlink already exists
   if (Test-Path $dest) {
