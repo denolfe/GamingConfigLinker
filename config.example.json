@@ -1,7 +1,7 @@
 {
   "links": [
     {
-      "source": "apex",
+      "source": "apex\\settings.cfg",
       "destination": "env:HOME\\Saved Games\\Respawn\\Apex\\local\\settings.cfg"
     },
     {
